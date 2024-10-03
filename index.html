@@ -1,0 +1,112 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Connect</title>
+    <style type="text/css">
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(180deg, #F1F8E9 0%, #81C784 100%); /* Light green to darker green */
+            padding: 15px 30px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%; /* Round logo */
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+
+        /* Button colors */
+        .yellow-btn {
+            background-color:  #FFC107; /* Yellow Button */
+        }
+
+        .yellow-btn:hover {
+            background-color: #FFC107; /* Darker yellow on hover */
+        }
+
+        .red-btn {
+            background-color: #F44336; /* Red Button */
+        }
+
+        .red-btn:hover {
+            background-color: #F44336; /* Darker red on hover */
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://img-cdn.pixlr.com/image-generator/history/66fb628907245903aa3c8f4b/9152c62d-487d-4f00-848a-10fe113d87d2/preview.webp" alt="Food Connect Logo">
+            <h1>Food Connect</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="aboutus.html" class="yellow-btn">About Us</a></li>
+                <li><a href="adminlogin.html" class="red-btn">Admin</a></li>
+                <li><a href="donorlogin.html" class="yellow-btn">Donor</a></li>
+                <li><a href="recipientlogin.html" class="red-btn">Recipient</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="https://t4.ftcdn.net/jpg/05/82/76/03/360_F_582760374_PZf2jblosBpEpCor5xLlZpwOocc8DjrK.jpg" alt="Food background">
+    </section>
+</body>
+</html>
