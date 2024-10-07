@@ -1,292 +1,27 @@
+
 <!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Recipient Organization</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    
+   
+    
+    <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        :root {
-            --body-color: #E4E9F7;
-            --sidebar-color: #FFF;
-            --primary-color: #695CFE;
-            --primary-color-light: #F6F5FF;
-            --toggle-color: #DDD;
-            --text-color: #707070;
-            --tran-05: all 0.3s ease;
-        }
-
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            background-size: cover;
-        }
-
-        body {
-            transition: var(--tran-05);
-        }
-
-        .home {
-            width: 100%;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .form-container {
-            max-width: 600px;
-            width: 100%;
-            min-height: 100vh; /* Set minimum height for the form */
-            overflow-y: auto; /* Enable vertical scrolling */
-            background-color: #81C784; /* Fallback solid color */
-             background-image: linear-gradient(180deg, #F1F8E9 0%, #81C784 100%);
-            border-radius: 7px;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-            margin: 20px;
-            padding: 20px; /* Add padding to the container */
-        }
-
-        form {
-            width: 100%;
-        }
-
-        form h2 {
-            font-size: 24px;
-            text-align: center;
-            margin: 0 0 20px;
-        }
-
-        form .form-group {
-            margin-bottom: 10px;
-            position: relative;
-        }
-
-        form input, form textarea, form select {
-            height: 35px;
-            padding: 8px;
-            width: 100%;
-            font-size: 14px;
-            outline: none;
-            border-radius: 3px;
-            border: 1px solid #bfbfbf;
-        }
-
-        form textarea {
-            resize: none;
-            height: 80px;
-        }
-
-        .form-group input[type="checkbox"] {
-            display: inline-block; /* Makes the checkbox inline */
-            width: auto; /* Auto width to fit content */
-            margin-right: 10px; /* Space between checkbox and label */
-            vertical-align: middle; /* Aligns checkbox with label text */
-        }
-
-        .form-group label {
-            display: inline; /* Keep label inline with checkbox */
-            vertical-align: middle; /* Aligns label with checkbox */
-        }
-
-        .submit-btn {
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .submit-btn input {
-            color: black;
-            border: none;
-            height: auto;
-            font-size: 14px;
-            padding: 10px 0;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 500;
-            text-align: center;
-            background:  #DCE775;
-            transition: 0.2s ease;
-        }
-
-        .submit-btn input:hover {
-            background: darkred;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .form-container {
-                max-width: 100%;
-                padding: 10px;
-            }
-
-            form h2 {
-                font-size: 18px;
-                margin: 0 0 10px;
-            }
-
-            form input, form textarea, form select {
-                height: 30px;
-                font-size: 12px;
-            }
-
-            .submit-btn input {
-                font-size: 12px;
-                padding: 7px 0;
-            }
-        }
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+      /* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
-
-*, *:after, *:before {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Lexend", sans-serif;
-    line-height: 1.5;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Changed to allow alignment to start from the left */
-    color: #393232;
-    padding: 0;
-    margin: 0;
-}
-
-img {
-    max-width: 50%;
-    display: block;
-}
-
-/* Container for the card list */
-.container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; /* Moves the card list to the right */
-    padding-right: 50px; /* Adjust the padding as per your preference */
-}
-
-/* Flexbox layout for cards */
-.card-list {
-    display: flex;
-    gap: 20px; /* Space between the cards */
-    width: 100%;
-    max-width: 1000px;
-    margin-left: auto; /* Ensures it stays on the right side */
-}
-
-.card {
-     background-color: #81C784; /* Fallback solid color */
-    background-image: linear-gradient(180deg, #F1F8E9 0%, #81C784 100%); 
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 20px 50px 0 rgba(0, 0, 0, .1);
-    border-radius: 15px;
-    overflow: hidden;
-    padding: 1.25rem;
-    position: relative;
-    transition: .15s ease-in;
-    width: calc(33.333% - 20px); /* Each card takes up one-third of the row, with spacing */
-}
-
-.card:hover, .card:focus-within {
-    box-shadow: 0 0 0 2px #16C79A, 0 10px 60px 0 rgba(0, 0, 0, .1);
-    transform: translateY(-5px);
-}
-
-.card-image {
-    border-radius: 10px;
-    overflow: hidden;
-    width: 180%; /* Ensures the card image takes the full width of the card */
-    height: auto; /* Keeps the height proportional to the width */
-}
-
-.card-image img {
-    width: 100%; /* Makes the image take the full width of the card */
-    height: auto; /* Adjusts height based on width to maintain aspect ratio */
-}
-
-.card-header {
-    margin-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.card-header a {
-    font-weight: 600;
-    font-size: 1.375rem;
-    line-height: 1.25;
-    padding-right: 1rem;
-    text-decoration: none;
-    color: inherit;
-}
-
-.icon-button {
-    border: 0;
-    background-color: #fff;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    font-size: 1.25rem;
-    transition: .25s ease;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 3px 8px 0 rgba(0, 0, 0, .15);
-    cursor: pointer;
-    color: #565656;
-}
-
-.icon-button:hover, .icon-button:focus {
-    background-color: #EC4646;
-    color: #FFF;
-}
-
-.card-footer {
-    margin-top: 1.25rem;
-    border-top: 1px solid #ddd;
-    padding-top: 1.25rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column; /* Change to column for centering */
-}
-
-.card-meta {
-    display: flex;
-    align-items: center;
-    color: #787878;
-}
-
-/* Remove the dot by removing the specific styles */
-.card-meta:first-child:after {
-    display: none; /* Remove the dot by hiding it */
-}
-
-.card-meta svg {
-    width: 1.5em; /* Slightly increase the size of the SVG */
-    height: 1.5em; /* Slightly increase the size of the SVG */
-    margin-right: 0; /* Remove the right margin */
 }
 
 :root{
@@ -326,6 +61,7 @@ body.dark{
     --toggle-color: #fff;
     --text-color: #ccc;
 }
+
 
 /* ===== Sidebar ===== */
  .sidebar{
@@ -591,9 +327,270 @@ body.dark .switch::before{
 body.dark .home .text{
     color: var(--text-color);
 }
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-size: cover;
+        }
+
+        body {
+            transition: var(--tran-05);
+        }
+
+        .home {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            width: 100%;
+            min-height: 100vh; /* Set minimum height for the form */
+            overflow-y: auto; /* Enable vertical scrolling */
+            background-color: #81C784; /* Fallback solid color */
+             background-image: linear-gradient(180deg, #F1F8E9 0%, #81C784 100%);
+            border-radius: 7px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            padding: 20px; /* Add padding to the container */
+        }
+
+        form {
+            width: 100%;
+        }
+
+        form h2 {
+            font-size: 24px;
+            text-align: center;
+            margin: 0 0 20px;
+        }
+
+        form .form-group {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        form input, form textarea, form select {
+            height: 35px;
+            padding: 8px;
+            width: 100%;
+            font-size: 14px;
+            outline: none;
+            border-radius: 3px;
+            border: 1px solid #bfbfbf;
+        }
+
+        form textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .form-group input[type="checkbox"] {
+            display: inline-block; /* Makes the checkbox inline */
+            width: auto; /* Auto width to fit content */
+            margin-right: 10px; /* Space between checkbox and label */
+            vertical-align: middle; /* Aligns checkbox with label text */
+        }
+
+        .form-group label {
+            display: inline; /* Keep label inline with checkbox */
+            vertical-align: middle; /* Aligns label with checkbox */
+        }
+
+        .submit-btn {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .submit-btn input {
+            color: black;
+            border: none;
+            height: auto;
+            font-size: 14px;
+            padding: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            text-align: center;
+            background:  #DCE775;
+            transition: 0.2s ease;
+        }
+
+        .submit-btn input:hover {
+            background: darkred;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .form-container {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            form h2 {
+                font-size: 18px;
+                margin: 0 0 10px;
+            }
+
+            form input, form textarea, form select {
+                height: 30px;
+                font-size: 12px;
+            }
+
+            .submit-btn input {
+                font-size: 12px;
+                padding: 7px 0;
+            }
+        }
     </style>
 </head>
 <body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="https://img-cdn.pixlr.com/image-generator/history/66fb628907245903aa3c8f4b/9152c62d-487d-4f00-848a-10fe113d87d2/preview.webp" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">FoodConnect</span>
+                    <span class="profession">Admin</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+    <li class="nav-link">
+        <a href="admindashboard.jsp">
+            <i class='bx bx-home-alt icon'></i> <!-- Home icon for Dashboard -->
+            <span class="text nav-text">Home</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="adminprofile.jsp">
+            <i class='bx bx-user-circle icon'></i> <!-- User profile icon for My Profile -->
+            <span class="text nav-text">My Profile</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="addadmin.jsp">
+            <i class='bx bx-edit icon'></i> <!-- Edit icon for Update Profile -->
+            <span class="text nav-text">Add Admin</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="addrecipient.jsp">
+            <i class='bx bx-plus-circle icon'></i> <!-- Add icon for Add Recipients -->
+            <span class="text nav-text">Add Recipients</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="viewrecipients.jsp">
+            <i class='bx bx-show icon'></i> <!-- View icon for View Recipients -->
+            <span class="text nav-text">View Recipients</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="updaterecipients.jsp">
+            <i class='bx bx-refresh icon'></i> <!-- Update icon for Update Recipients -->
+            <span class="text nav-text">Update Recipients</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="adddonor.jsp">
+            <i class='bx bx-plus-circle icon'></i> <!-- Add icon for Add Donors -->
+            <span class="text nav-text">Add Donors</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="viewdonors.jsp">
+            <i class='bx bx-show icon'></i> <!-- View icon for View Donors -->
+            <span class="text nav-text">View Donors</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="updatedonors.jsp">
+            <i class='bx bx-refresh icon'></i> <!-- Update icon for Update Donors -->
+            <span class="text nav-text">Update Donors</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="foodreport.jsp">
+            <i class='bx bx-bar-chart icon'></i>
+            <span class="text nav-text">Category Reports</span>
+        </a>
+    </li>
+</ul>
+
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="homepage.jsp">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+<!--         <div class="text">Dashboard Sidebar</div> -->
+    </section>
+
     <script>
         const body = document.querySelector('body'),
       sidebar = body.querySelector('nav'),
@@ -622,84 +619,83 @@ modeSwitch.addEventListener("click" , () =>{
     }
 });
     </script>
+<section class="home">
+    <div class="form-container">
+        <form action="AddRecipient" method="post">
+            <h2>Add Recipient Organization</h2>
 
-    <section class="home">
-        <div class="form-container">
-            <form action="AddRecipient" method="post">
-                <h2>Add Recipient Organization</h2>
+            <div class="form-group">
+                <label for="registrationNumber">Registration Number (or Tax ID)</label>
+                <input type="number" id="registrationNumber" name="registrationNumber" placeholder="Enter registration number" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="registrationNumber">Registration Number (or Tax ID)</label>
-                    <input type="number" id="registrationNumber" name="registrationNumber" placeholder="Enter registration number" required>
-                </div>
+            <div class="form-group">
+                <label for="orgName">Organization Name</label>
+                <input type="text" id="orgName" name="orgName" placeholder="Enter organization name" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="orgName">Organization Name</label>
-                    <input type="text" id="orgName" name="orgName" placeholder="Enter organization name" required>
-                </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter email address" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="Enter email address" required>
-                </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
-                </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter address" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="address">Address</label>
-                    <input type="text" id="address" name="address" placeholder="Enter address" required>
-                </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Enter city" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="city">City</label>
-                    <input type="text" id="city" name="city" placeholder="Enter city" required>
-                </div>
+            <div class="form-group">
+                <label for="state">State/Province</label>
+                <input type="text" id="state" name="state" placeholder="Enter state" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="state">State/Province</label>
-                    <input type="text" id="state" name="state" placeholder="Enter state" required>
-                </div>
+            <div class="form-group">
+                <label for="postalCode">Postal Code</label>
+                <input type="number" id="postalCode" name="postalCode" placeholder="Enter postal code" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="postalCode">Postal Code</label>
-                    <input type="number" id="postalCode" name="postalCode" placeholder="Enter postal code" required>
-                </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" placeholder="Enter country" required>
+            </div>
 
-                <div class="form-group">
-                    <label for="country">Country</label>
-                    <input type="text" id="country" name="country" placeholder="Enter country" required>
-                </div>
+            <div class="form-group">
+                <label for="orgType">Organization Type</label>
+                <select id="orgType" name="orgType" required>
+                    <option value="">Select type</option>
+                    <option value="ngo">NGO</option>
+                    <option value="non-profit">Non-Profit</option>
+                    <option value="religious">Religious Organization</option>
+                    <option value="shelter">Shelter</option>
+                    <option value="charity">Charity</option>
+                </select>
+            </div>
 
-                <div class="form-group">
-                    <label for="orgType">Organization Type</label>
-                    <select id="orgType" name="orgType" required>
-                        <option value="">Select type</option>
-                        <option value="ngo">NGO</option>
-                        <option value="non-profit">Non-Profit</option>
-                        <option value="religious">Religious Organization</option>
-                        <option value="shelter">Shelter</option>
-                        <option value="charity">Charity</option>
-                    </select>
-                </div>
+            <div class="form-group">
+                <label for="pickupTime">Preferred Pickup/Delivery Times</label>
+                <input type="datetime" id="pickupTime" name="pickupTime" placeholder="Enter preferred pickup or delivery times">
+            </div>
 
-                <div class="form-group">
-                    <label for="pickupTime">Preferred Pickup/Delivery Times</label>
-                    <input type="datetime" id="pickupTime" name="pickupTime" placeholder="Enter preferred pickup or delivery times">
-                </div>
+            <div class="form-group">
+                <input type="checkbox" id="foodSafety" name="foodSafety" required>
+                <label for="foodSafety">I comply with food safety standards.</label>
+            </div>
 
-                <div class="form-group">
-                    <input type="checkbox" id="foodSafety" name="foodSafety" required>
-                    <label for="foodSafety">I comply with food safety standards.</label>
-                </div>
-
-                <div class="submit-btn">
-                    <input type="submit" value="Submit Donation">
-                </div>
-            </form>
-        </div>
-    </section>
+            <div class="submit-btn">
+                <input type="submit" value="Submit Donation">
+            </div>
+        </form>
+    </div>
+</section>
 </body>
 </html>
