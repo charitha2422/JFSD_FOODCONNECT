@@ -1,152 +1,27 @@
 
 <!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Form</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    
+   
+    
+    <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+      /* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
-
-*, *:after, *:before {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Lexend", sans-serif;
-    line-height: 1.5;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Changed to allow alignment to start from the left */
-    color: #393232;
-    padding: 0;
-    margin: 0;
-}
-
-img {
-    max-width: 50%;
-    display: block;
-}
-
-/* Container for the card list */
-.container {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; /* Moves the card list to the right */
-    padding-right: 50px; /* Adjust the padding as per your preference */
-}
-
-/* Flexbox layout for cards */
-.card-list {
-    display: flex;
-    gap: 20px; /* Space between the cards */
-    width: 100%;
-    max-width: 1000px;
-    margin-left: auto; /* Ensures it stays on the right side */
-}
-
-.card {
-     background-color: #81C784; /* Fallback solid color */
-    background-image: linear-gradient(180deg, #F1F8E9 0%, #81C784 100%); 
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 20px 50px 0 rgba(0, 0, 0, .1);
-    border-radius: 15px;
-    overflow: hidden;
-    padding: 1.25rem;
-    position: relative;
-    transition: .15s ease-in;
-    width: calc(33.333% - 20px); /* Each card takes up one-third of the row, with spacing */
-}
-
-.card:hover, .card:focus-within {
-    box-shadow: 0 0 0 2px #16C79A, 0 10px 60px 0 rgba(0, 0, 0, .1);
-    transform: translateY(-5px);
-}
-
-.card-image {
-    border-radius: 10px;
-    overflow: hidden;
-    width: 180%; /* Ensures the card image takes the full width of the card */
-    height: auto; /* Keeps the height proportional to the width */
-}
-
-.card-image img {
-    width: 100%; /* Makes the image take the full width of the card */
-    height: auto; /* Adjusts height based on width to maintain aspect ratio */
-}
-
-.card-header {
-    margin-top: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.card-header a {
-    font-weight: 600;
-    font-size: 1.375rem;
-    line-height: 1.25;
-    padding-right: 1rem;
-    text-decoration: none;
-    color: inherit;
-}
-
-.icon-button {
-    border: 0;
-    background-color: #fff;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    font-size: 1.25rem;
-    transition: .25s ease;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, .05), 0 3px 8px 0 rgba(0, 0, 0, .15);
-    cursor: pointer;
-    color: #565656;
-}
-
-.icon-button:hover, .icon-button:focus {
-    background-color: #EC4646;
-    color: #FFF;
-}
-
-.card-footer {
-    margin-top: 1.25rem;
-    border-top: 1px solid #ddd;
-    padding-top: 1.25rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column; /* Change to column for centering */
-}
-
-.card-meta {
-    display: flex;
-    align-items: center;
-    color: #787878;
-}
-
-/* Remove the dot by removing the specific styles */
-.card-meta:first-child:after {
-    display: none; /* Remove the dot by hiding it */
-}
-
-.card-meta svg {
-    width: 1.5em; /* Slightly increase the size of the SVG */
-    height: 1.5em; /* Slightly increase the size of the SVG */
-    margin-right: 0; /* Remove the right margin */
 }
 
 :root{
@@ -451,34 +326,7 @@ body.dark .switch::before{
 body.dark .home .text{
     color: var(--text-color);
 }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        :root {
-            --body-color: #E4E9F7;
-            --sidebar-color: #FFF;
-            --primary-color: #695CFE;
-            --primary-color-light: #F6F5FF;
-            --toggle-color: #DDD;
-            --text-color: #707070;
-            --tran-05: all 0.3s ease;
-        }
-
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            background-size: cover;
-        }
-
-        body {
+body {
             transition: var(--tran-05);
         }
 
@@ -577,13 +425,133 @@ body.dark .home .text{
                 font-size: 12px;
                 padding: 7px 0;
             }
-        }
     </style>
 </head>
 <body>
-   
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="https://img-cdn.pixlr.com/image-generator/history/66fb628907245903aa3c8f4b/9152c62d-487d-4f00-848a-10fe113d87d2/preview.webp" alt="">
+                </span>
 
+                <div class="text logo-text">
+                    <span class="name">FoodConnect</span>
+                    <span class="profession">Admin</span>
+                </div>
+            </div>
 
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+    <li class="nav-link">
+        <a href="admindashboard.jsp">
+            <i class='bx bx-home-alt icon'></i> <!-- Home icon for Dashboard -->
+            <span class="text nav-text">Home</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="adminprofile.jsp">
+            <i class='bx bx-user-circle icon'></i> <!-- User profile icon for My Profile -->
+            <span class="text nav-text">My Profile</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="addadmin.jsp">
+            <i class='bx bx-edit icon'></i> <!-- Edit icon for Update Profile -->
+            <span class="text nav-text">Add Admin</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="addrecipient.jsp">
+            <i class='bx bx-plus-circle icon'></i> <!-- Add icon for Add Recipients -->
+            <span class="text nav-text">Add Recipients</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="viewrecipients.jsp">
+            <i class='bx bx-show icon'></i> <!-- View icon for View Recipients -->
+            <span class="text nav-text">View Recipients</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="updaterecipients.jsp">
+            <i class='bx bx-refresh icon'></i> <!-- Update icon for Update Recipients -->
+            <span class="text nav-text">Update Recipients</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="adddonor.jsp">
+            <i class='bx bx-plus-circle icon'></i> <!-- Add icon for Add Donors -->
+            <span class="text nav-text">Add Donors</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="viewdonors.jsp">
+            <i class='bx bx-show icon'></i> <!-- View icon for View Donors -->
+            <span class="text nav-text">View Donors</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="updatedonors.jsp">
+            <i class='bx bx-refresh icon'></i> <!-- Update icon for Update Donors -->
+            <span class="text nav-text">Update Donors</span>
+        </a>
+    </li>
+    
+    <li class="nav-link">
+        <a href="foodreport.jsp">
+            <i class='bx bx-bar-chart icon'></i>
+            <span class="text nav-text">Category Reports</span>
+        </a>
+    </li>
+</ul>
+
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="homepage.jsp">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    
     <section class="home">
         <div class="form-container">
             <form action="login.html">
@@ -605,5 +573,36 @@ body.dark .home .text{
             </form>
         </div>
     </section>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+    
+
 </body>
 </html>
